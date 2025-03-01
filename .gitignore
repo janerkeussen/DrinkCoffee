@@ -1,0 +1,22 @@
+# System generated files
+
+Thumbs.db
+
+
+
+# Local development files
+
+.DS_Store
+
+
+
+# Logs
+
+*.log
+
+#Google plist
+
+GoogleService-Info.plist
+
+#User settings
+xcuserdata/
