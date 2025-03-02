@@ -9,13 +9,29 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            Text("Hello, Alex")
+                .navigationTitle("DrinkCoffee")
+                .toolbar {
+                    ToolbarItem(placement: .topBarTrailing) {
+                        Button {
+                            print("basket")
+                        } label: {
+                            Image("basket")
+                                .renderingMode(.template)
+                        }
+                    }
+                    
+                    ToolbarItem(placement: .topBarLeading) {
+                        Button {
+                            print("Log out")
+                        } label: {
+                            Text("Log out")
+                                .fontWeight(.semibold)
+                        }
+                    }
+                }
         }
-        .padding()
     }
 }
 
