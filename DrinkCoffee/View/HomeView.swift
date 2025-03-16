@@ -9,8 +9,10 @@ import SwiftUI
 
 struct HomeView: View {
     
+    @ObservedObject var drinksListener = DrinkListener()
+    
     var categories: [String : [Drink]] {
-        .init(grouping: drinkData) { $0.category.rawValue }
+        .init(grouping: drinksListener.drinks) { $0.category.rawValue }
     }
     
     var body: some View {
